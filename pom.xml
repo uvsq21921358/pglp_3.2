@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>LSP</name>
+  <name>OCP</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -37,6 +37,20 @@
                 <configLocation>checkstyle.xml</configLocation>
             </configuration>
         </plugin>
+        
+        <plugin>
+  <groupId>com.github.spotbugs</groupId>
+  <artifactId>spotbugs-maven-plugin</artifactId>
+  <version>4.0.0</version>
+  <dependencies>
+    <!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
+    <dependency>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs</artifactId>
+      <version>4.0.1</version>
+    </dependency>
+  </dependencies>
+</plugin>
   </plugins>
   </build>
   
